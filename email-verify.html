@@ -26,24 +26,24 @@
     padding: 0;
   }
   main {
-    max-width: 480px;
+    max-width: 440px;
     margin: 0 auto;
-    padding: 80px 24px 64px;
+    padding: 96px 24px 64px;
     text-align: center;
   }
   .badge {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background: var(--success-bg);
     margin: 0 auto 24px;
   }
   .badge svg {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     color: var(--success);
   }
   h1 {
@@ -57,30 +57,19 @@
     color: var(--muted);
     margin: 0 0 32px;
   }
-  .steps {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    padding: 24px;
-    text-align: left;
-    margin: 0 auto 32px;
+  .return-link {
+    display: inline-block;
+    padding: 14px 28px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 999px;
+    transition: transform 0.15s ease, opacity 0.15s ease;
   }
-  .steps ol {
-    margin: 0;
-    padding-left: 24px;
-  }
-  .steps li {
-    font-weight: 600;
-    margin-bottom: 12px;
-  }
-  .steps li:last-child {
-    margin-bottom: 0;
-  }
-  .steps li span {
-    display: block;
-    font-weight: 500;
-    color: var(--muted);
-    margin-top: 4px;
+  .return-link:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
   }
   .eyebrow {
     font-size: 12px;
@@ -91,7 +80,7 @@
     margin: 0 0 16px;
   }
   footer {
-    margin-top: 48px;
+    margin-top: 64px;
     padding-top: 24px;
     border-top: 1px solid var(--border);
     color: var(--muted);
@@ -109,20 +98,8 @@
     </svg>
   </div>
   <h1>Email confirmed</h1>
-  <p class="lead">Your account is verified. You can now finish signing in.</p>
-  <div class="steps">
-    <ol>
-      <li>Close this browser tab.
-        <span>You're done here — verification is complete on our end.</span>
-      </li>
-      <li>Open the Laeli app.
-        <span>Return to where you left off — the "Check your email" screen.</span>
-      </li>
-      <li>Tap "I confirmed my email — log me in."
-        <span>That signs you in with your new account.</span>
-      </li>
-    </ol>
-  </div>
+  <p class="lead">Your account is verified. Return to the Laeli app to continue.</p>
+  <a class="return-link" href="laeli://auth-callback">Open Laeli</a>
   <footer>
     Questions? <a href="mailto:support@laeli.app">support@laeli.app</a>
   </footer>
